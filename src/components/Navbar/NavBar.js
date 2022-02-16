@@ -5,32 +5,31 @@ import './NavBar.css'
 
 function NavBar() {
     return (
-        <Navbar expand="lg">
-            <Container fluid>
-                <Navbar.Brand href="#"><img src={logo} alt="" className='logo' /></Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg" bg='none' >
+            <Container>
+                <Navbar.Brand href="#home"><img src={logo} alt="" className='logo' /></Navbar.Brand>
                 <Form className='form'>
-                            <FormControl
-                                type="search"
-                                placeholder="Search"
-                                className="me-2"
-                                aria-label="Search"
-                            />
-                        </Form>
-                <Navbar.Toggle aria-controls="navbarScroll" />
-                <Navbar.Collapse id="navbarScroll">
-                    <Nav
-                        className="ml-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                        navbarScroll
-                    >
-                        
-                        <Nav.Link href="#action1">News</Nav.Link>
-                        <Nav.Link href="#action2">Destination</Nav.Link>
-                        <Nav.Link href="#action1">Blog</Nav.Link>
-                        <Nav.Link href="#action2">Contact</Nav.Link>
-                        <Button>Login</Button>
-                    </Nav>
+                    <FormControl
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                </Form>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="me-auto">
 
+                    </Nav>
+                    <Nav>
+                        <Nav.Link href="#deets">News</Nav.Link>
+                        <Nav.Link href="#deets">Destination</Nav.Link>
+                        <Nav.Link href="#deets">Blog</Nav.Link>
+                        <Nav.Link href="#deets">Contact</Nav.Link>
+                        <Nav.Link eventKey={2} href="#memes">
+                            Login
+                        </Nav.Link>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>

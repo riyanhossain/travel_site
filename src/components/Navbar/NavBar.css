@@ -11,9 +11,15 @@
     margin-left: 10%;
     margin-right: 10%;
 }
-/* .container{
-    justify-content: space-evenly;
-} */
+.nav-link{
+    color: white !important;
+    margin: 15px;
+}
+.nav-link:hover{
+    background-color: #F9A51A !important;
+    padding: 8px;
+    border-radius: 4px;
+}
 @media screen and (max-width:660px) {
     .form{
         width: 25%;
@@ -23,6 +29,12 @@
         display: flex;
         margin-left: 5%;
         margin-right: 5%;
+        background-color:rgb(150, 224, 253);
+        backdrop-filter: blur(2px);
     }
-    
+    .nav-link:hover{
+        background-color: rgb(36, 179, 184) !important;
+        padding: 8px;
+        border-radius: 0;
+    }  
 }
