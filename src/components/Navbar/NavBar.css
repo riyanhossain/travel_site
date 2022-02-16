@@ -1,0 +1,28 @@
+.logo{
+    width: auto;
+    height: 60px;
+}
+.form{
+    width: 30%;
+}
+.navbar{
+    padding: 15px;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+/* .container{
+    justify-content: space-evenly;
+} */
+@media screen and (max-width:660px) {
+    .form{
+        width: 25%;
+    }
+    .navbar{
+        padding: 5px;
+        display: flex;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    
+}
