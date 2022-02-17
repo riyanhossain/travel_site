@@ -1,0 +1,13 @@
+.Form{
+    background-color: white !important;
+    width:50%;
+    margin-left: 30%;
+    margin-top: 2%;
+    padding: 3%;
+}
+.Button{
+    margin-top: 2%;
+}
+.colx{
+    display: flex;
+}

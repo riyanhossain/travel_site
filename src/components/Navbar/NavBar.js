@@ -7,7 +7,7 @@ function NavBar() {
     return (
         <Navbar collapseOnSelect expand="lg" bg='none' >
             <Container>
-                <Navbar.Brand href="#home"><img src={logo} alt="" className='logo' /></Navbar.Brand>
+                <Navbar.Brand href="/"><img src={logo} alt="" className='logo' /></Navbar.Brand>
                 <Form className='form'>
                     <FormControl
                         type="search"

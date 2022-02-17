@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import './DestinationSelector.css'
 import ItemsCarousel from 'react-items-carousel';
 import { Button, Carousel, Col, Container, Row } from 'react-bootstrap';
-import image1 from '../../images/Image/Sajek.png'
-import image2 from '../../images/Image/Sreemongol.png'
-import image3 from '../../images/Image/sundorbon.png'
+import ImageCard from '../imageCard/imageCard';
+import BookingForm from '../BookingForm/BookingForm';
 
 
 function DestinationSelector() {
@@ -12,13 +11,12 @@ function DestinationSelector() {
   const [des, setDes] = useState('Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur provident quaerat laborum animi tempora sunt error autem a esse quisquam dicta voluptatem, praesentium exercitationem mollitia possimus natus non labore.')
   const name1 = [{ nam: 'SAJEK', des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aspernatur provident quaerat laborum animi tempora sunt error autem a esse quisquam dicta voluptatem, praesentium exercitationem mollitia possimus natus non labore.' },
   { nam: 'SREEMONGOL', des: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tenetur maiores voluptate asperiores quos laudantium amet quasi sunt necessitatibus vitae voluptatem ipsa deserunt nobis quaerat quis, illo, aliquid fugiat. Odio.' },
-  { nam: 'SUDARBON', des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam illum assumenda cum excepturi vero. Optio maxime esse tempore, asperiores, cum ad repudiandae eaque nihil id in quis cupiditate aliquam non.' }
+  { nam: 'SUNDARBON', des: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam illum assumenda cum excepturi vero. Optio maxime esse tempore, asperiores, cum ad repudiandae eaque nihil id in quis cupiditate aliquam non.' }
   ]
-  const handleClick = (n) => {
-    setName(n.nam)
-    setDes(n.des)
+  const [bookBtn,setBookBtn]=useState(true)
+  const handleBookBtn=()=>{
+    setBookBtn(false)
   }
-
   return (
     <div className='homeCON'>
       <Container>
@@ -29,23 +27,12 @@ function DestinationSelector() {
             <p>
               {des}
             </p>
-            <Button>Booking</Button>
+            {bookBtn && <Button onClick={()=>handleBookBtn()}>Booking</Button>}
           </Col>
-          <Col className='col2' xxl={8}>
-            <div className='CON'>
-              <div className='textCON'>SAJEK</div>
-              <img src={image1} alt="" className='imgCON' onClick={() => handleClick(name1[0])} />
-            </div>
-
-            <div className='CON'>
-              <div className='textCON'>SREEMONGOL</div>
-              <img src={image2} alt="" className='imgCON' onClick={() => handleClick(name1[1])} />
-            </div>
-            <div className='CON'>
-              <div className='textCON'>SUNDARBON</div>
-              <img src={image3} alt="" className='imgCON' onClick={() => handleClick(name1[2])} />
-            </div>
-          </Col>
+          {
+            bookBtn ? <ImageCard name1={name1} setName={setName} setDes={setDes} />:
+            <Col><BookingForm name={name}/></Col>
+          }
         </Row>
       </Container>
     </div>
