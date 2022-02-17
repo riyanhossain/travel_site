@@ -1,0 +1,30 @@
+.imgCON{
+    width: 100%;
+    padding: 10px;
+}
+.imgCON:hover{  
+    border: 4px solid #f9a51a;
+    padding: 0;
+    box-shadow: #F9A51A;
+    border-radius: 8%;
+}
+.col1{
+    color: white;
+}
+.col2{
+    display: flex;
+}
+.CON{
+    position: relative;
+}
+.textCON{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 16px;
+    font-size: 2rem;
+    color: aliceblue;
+    font-weight: bold;
+}
+.homeCON{
+    margin-top: 5%;
+}
