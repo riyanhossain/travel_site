@@ -21,7 +21,7 @@ function BookingForm(props) {
           <Datepicker label={'From'}/>
           <Datepicker label={'To'}/> 
         </Col>
-        <Button variant="contained">Start Booking</Button>
+        <Button variant="contained" href='/HotelList'>Start Booking</Button>
       </FormControl>
     </div>
   )

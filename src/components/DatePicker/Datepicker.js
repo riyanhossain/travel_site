@@ -8,19 +8,19 @@ import { DesktopDatePicker } from '@mui/lab';
 function Datepicker(props) {
   const [value, setValue] = useState(new Date());
 
-    return (
-<LocalizationProvider dateAdapter={AdapterDateFns}>
-<DesktopDatePicker
-          label={props.label}
-          value={value}
-          minDate={new Date('2017-01-01')}
-          onChange={(newValue) => {
-            setValue(newValue);
-          }}
-          renderInput={(params) => <TextField {...params} />}
-        />
-</LocalizationProvider>
-    );
+  return (
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <DesktopDatePicker
+        label={props.label}
+        value={value}
+        minDate={new Date('2017-01-01')}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(params) => <TextField {...params} />}
+      />
+    </LocalizationProvider>
+  );
 }
 
 export default Datepicker
