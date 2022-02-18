@@ -1,10 +1,15 @@
 import { Button, FormControl, TextField } from '@mui/material'
-import React from 'react'
+import React, { useContext } from 'react'
 import { Col } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import Datepicker from '../DatePicker/Datepicker'
 import './BookingForm.css'
 
 function BookingForm(props) {
+  // const handleClick=(n)=>{
+  //   setHotel(n)
+  // }
+  let navigate=useNavigate();
   return (
     <div className='Form'>
       <FormControl margin={'normal'} variant={'outlined'}>
@@ -21,7 +26,7 @@ function BookingForm(props) {
           <Datepicker label={'From'}/>
           <Datepicker label={'To'}/> 
         </Col>
-        <Button variant="contained" href='/HotelList'>Start Booking</Button>
+        <Button variant="contained"onClick={()=>navigate(`/${props.name}`)}>Start Booking</Button>
       </FormControl>
     </div>
   )

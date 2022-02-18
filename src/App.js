@@ -7,18 +7,26 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import HotelList from './components/HotelList/HotelList';
+import HotelContext from './components/ContextAPI/HotelContext';
+import SAJEK from './components/HotelRoom/Sajek';
+import SREEMONGAL from './components/HotelRoom/SREEMONGAL';
+import SUNDARBON from './components/HotelRoom/SUNDARBON';
 
 function App() {
   return (
     <div>
 
+
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/HotelList" element={<HotelList />}/>
+          <Route path="SAJEK" element={<SAJEK/>}/> 
+          <Route path="SREEMONGOL" element={<SREEMONGAL/>}/>          
+          <Route path="SUNDARBON" element={<SUNDARBON/>}/> 
         </Routes>
       </BrowserRouter>
+
     </div>
   );
 }
